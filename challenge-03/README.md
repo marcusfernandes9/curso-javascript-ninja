@@ -132,7 +132,7 @@ pessoa.andando; //true
 /*
 Se a pessoa ainda está andando, faça-a parar.
 */
-pessoa.parar()
+pessoa.parar(); //false
 
 /*
 E agora: a pessoa ainda está andando? (Use uma instrução para responder e
@@ -164,24 +164,18 @@ método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
 pessoa.apresentacao = function() {
-    var artigoSexo;
-    var pluralAno;
-    var pluralMetro;
-    if(pessoa.sexo === 'Masculino') {
-		artigoSexo = 'o';
-    } else {
-		artigoSexo = 'a';
+    var artigoSexo = 'o';
+    var pluralAno = 'anos';
+    var pluralMetro = 'metros';
+    if(pessoa.sexo === 'Feminino') {
+		    artigoSexo = 'a';
     }
     if(pessoa.idade === 1) {
-		pluralAno = 'ano';
-	} else {
-		pluralAno = 'anos';
-	}
+		    pluralAno = 'ano';
+	  } 
 	if(pessoa.caminhouQuantosMetros === 1) {
-		pluralMetro = 'metro';
-	} else {
-		pluralMetro = 'metros';
-	}
+		  pluralMetro = 'metro';
+	} 
 	return 'Olá, eu sou ' + artigoSexo + ' ' + pessoa.nome + ' ' + pessoa.sobrenome + ', tenho ' + pessoa.idade 
 			+ ' ' + pluralAno + ', ' + pessoa.altura + ', meu peso é ' + pessoa.peso + ' e, só hoje, eu já caminhei ' 
 			+ pessoa.caminhouQuantosMetros + ' ' + pluralMetro + '!';
